@@ -1,0 +1,45 @@
+---
+title: "Sta426, Week 1"
+author: "awcoward"
+date: "24 September 2017"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 2
+
+### Create a sample with 100 values from a log-normal distribution:
+
+```{r sample}
+x <- rlnorm(100,1,0.25)
+
+x
+```
+
+
+
+
+### Create a histogram of the distribution and the distribution on the log-scale:
+
+```{r histogram}
+hist(x, 20, main='Histogram of a sample of a lognormal distribution', col = "lightblue", border = "pink")
+
+hist(log(x), 20, main='Histogram of a sample of a lognormal distribution on the log-scale', col = "lightblue", border = "pink")
+
+mu = mean(x)
+var = var(x)
+```
+
+
+### Report the mean and variance of the sample in line in the text:
+
+Mu is `r toString(mu)` and the variance is `r toString(var)`.
+
+
+
+
